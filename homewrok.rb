@@ -41,3 +41,53 @@ def multiples(x)
 
  array_of_multiples
 end
+
+
+def stop_sign 
+	puts "which way do you want to turn?"
+	input = gets.chomp
+	if input == "left"
+		puts "Turning Left!"
+	elsif input == "right"
+		puts "Turning Right" 
+	else
+		puts "Crash!!"
+	end
+end  
+
+
+def spaces(string)
+  count = 0
+  string.each_char do |char|
+    if char == " "
+      count = count + 1
+    end
+  end
+  return count
+end  
+
+def letter_count(string, letter) 
+  count = 0
+  string.each_char do |char|
+    if char == letter
+      count = count + 1
+    end
+  end
+  return count
+
+end
+
+def number_count(base_number, number_to_count)
+  count = 0
+  while(base_number > 0)
+    store = base_number % 10
+    if(store == number_to_count)
+    count = count + 1
+    end
+    base_number = base_number - store
+    base_number = base_number / 10
+  end
+  return count
+end
+
+
